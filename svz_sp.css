@@ -22,9 +22,10 @@
   align-items: center;
 }
 .svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-details-container {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   margin-top: 20px;
+  flex-direction: column;
 }
 @media only screen and (min-width: 1080px) {
   .svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-details-container p {
@@ -73,14 +74,23 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
   width: 80%;
+  transition: transform 400ms ease;
 }
 @media screen and (max-width: 766px) {
   .svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-image-container {
     width: 50%;
   }
 }
-.svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-image-container img {
+.svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-image-container a {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-image-container a img {
   position: absolute;
   object-fit: cover;
   width: 100%;
@@ -88,6 +98,9 @@
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+}
+.svz-sp-row-container .svz-sp-row .svz-sp-post-container .svz-sp-image-container:hover {
+  transform: scale(1.1);
 }
 .svz-sp-row-container .svz-sp-row .svz-sp-post-container.orient-left {
   text-align: left;
@@ -100,4 +113,16 @@
   flex: 3;
   margin-top: unset;
   margin-left: 20px;
+}
+
+.svz-sp-container .button {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  background-color: #5858c5;
+  color: #FCFCFC;
 }
